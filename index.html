@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocMuncher - Transform Your Document Workflow</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .feature-card {
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        .floating-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .pulse-glow {
+            animation: pulse-glow 2s infinite;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(102, 126, 234, 0.4);
+            }
+            50% {
+                box-shadow: 0 0 40px rgba(102, 126, 234, 0.8);
+            }
+        }
+
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 overflow-x-hidden">
+<!-- Navigation -->
+<nav class="bg-white/90 backdrop-blur-md shadow-lg fixed w-full z-50 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-blue-600 rounded-xl flex items-center justify-center">
+                    <span class="text-white font-bold text-lg">DM</span>
+                </div>
+                <span class="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">DocMuncher</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="text-gray-700 hover:text-purple-600 font-medium transition-colors">Home</a>
+                <a href="#tools" class="text-gray-700 hover:text-purple-600 font-medium transition-colors">Our Tools</a>
+                <!--                <a href="#pricing" class="text-gray-700 hover:text-purple-600 font-medium transition-colors">Pricing</a>-->
+                <!--                <a href="#about" class="text-gray-700 hover:text-purple-600 font-medium transition-colors">About Us</a>-->
+                <!--                <a href="#contact" class="text-gray-700 hover:text-purple-600 font-medium transition-colors">Contact</a>-->
+            </div>
+            <!--            <button class="md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100">-->
+            <!--                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">-->
+            <!--                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"-->
+            <!--                          d="M4 6h16M4 12h16M4 18h16"></path>-->
+            <!--                </svg>-->
+            <!--            </button>-->
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="gradient-bg min-h-screen flex items-center relative overflow-hidden pt-16">
+    <div class="absolute inset-0 bg-black/20"></div>
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center relative z-10">
+        <div class="text-white space-y-8">
+            <!--            <div class="inline-flex items-center px-4 py-2 bg-white/10 rounded-full text-sm font-medium glassmorphism">-->
+            <!--                <span class="w-2 h-2 bg-green-400 rounded-full mr-2 pulse-glow"></span>-->
+            <!--                Award-Winning Document Processing Tools-->
+            <!--            </div>-->
+            <h1 class="text-5xl lg:text-7xl font-bold leading-tight">
+                Transform Your
+                <span class="bg-gradient-to-r from-yellow-300 to-orange-400 bg-clip-text text-transparent">
+                        Document Workflow
+                    </span>
+            </h1>
+            <p class="text-xl lg:text-2xl text-gray-200 leading-relaxed">
+                Intelligent file processing tools that eliminate the most time-consuming aspects of document work.
+                Convert, format, and analyze your files with professional-grade automation.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#tools"
+                   class="px-8 py-4 bg-white text-purple-600 font-semibold rounded-xl hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-xl">
+                    Explore Tools →
+                </a>
+                <!--                <button class="px-8 py-4 border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300">-->
+                <!--                    Watch Demo-->
+                <!--                </button>-->
+            </div>
+
+            <!-- Stats -->
+            <!--            <div class="grid grid-cols-3 gap-8 pt-8">-->
+            <!--                <div class="text-center">-->
+            <!--                    <div class="text-3xl lg:text-4xl font-bold text-yellow-300">500K+</div>-->
+            <!--                    <div class="text-sm text-gray-300">Files Processed</div>-->
+            <!--                </div>-->
+            <!--                <div class="text-center">-->
+            <!--                    <div class="text-3xl lg:text-4xl font-bold text-yellow-300">98%</div>-->
+            <!--                    <div class="text-sm text-gray-300">Success Rate</div>-->
+            <!--                </div>-->
+            <!--                <div class="text-center">-->
+            <!--                    <div class="text-3xl lg:text-4xl font-bold text-yellow-300">25+</div>-->
+            <!--                    <div class="text-sm text-gray-300">File Formats</div>-->
+            <!--                </div>-->
+            <!--            </div>-->
+        </div>
+
+        <!-- Hero Image/Visual -->
+        <div class="relative">
+            <div class="floating-animation">
+                <div class="relative">
+                    <!-- Main device mockup -->
+                    <div class="bg-white rounded-3xl shadow-2xl p-6 mx-auto max-w-md">
+                        <div class="bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl p-6 text-white">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-sm font-medium opacity-90">Financial Converter</span>
+                                <div class="w-3 h-3 bg-green-400 rounded-full pulse-glow"></div>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
+                                        <span class="text-xs">📄</span>
+                                    </div>
+                                    <span class="text-sm">QIF, OFX, QFX → Google Sheets</span>
+                                </div>
+                                <!--                                <div class="flex items-center space-x-3">-->
+                                <!--                                    <div class="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">-->
+                                <!--                                        <span class="text-xs">📊</span>-->
+                                <!--                                    </div>-->
+                                <!--                                    <span class="text-sm">OFX → Excel Format</span>-->
+                                <!--                                </div>-->
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
+                                        <span class="text-xs">⚡</span>
+                                    </div>
+                                    <span class="text-sm">Instant Processing</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Floating elements -->
+                    <div class="absolute -top-6 -right-6 w-20 h-20 bg-yellow-400 rounded-2xl flex items-center justify-center shadow-xl">
+                        <span class="text-2xl">⚡</span>
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 w-16 h-16 bg-green-400 rounded-xl flex items-center justify-center shadow-xl">
+                        <span class="text-xl">✓</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Trusted by section -->
+    <!--    <div class="absolute bottom-0 left-0 right-0 bg-white/10 glassmorphism py-8">-->
+    <!--        <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">-->
+    <!--            <p class="text-white/80 text-sm font-medium mb-6">Trusted by professionals worldwide</p>-->
+    <!--            <div class="flex justify-center items-center space-x-12 opacity-60">-->
+    <!--                <div class="text-white font-bold text-2xl">Google</div>-->
+    <!--                <div class="text-white font-bold text-2xl">Microsoft</div>-->
+    <!--                <div class="text-white font-bold text-2xl">QuickBooks</div>-->
+    <!--                <div class="text-white font-bold text-2xl">Excel</div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+</section>
+
+<!-- Tools Section -->
+<section id="tools" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                Our Professional Tools
+            </h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                Streamline your workflow with our suite of intelligent document processing tools designed for modern
+                professionals
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Financial File Converter -->
+            <div class="col-start-2 col-end-2 flex flex-col feature-card bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl p-8 border border-purple-100">
+                <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="29.0582 23.0565 437.8148 455.7278"
+                         width="4em" height="4em" preserveAspectRatio="none">
+                        <g id="object-0">
+                            <ellipse style="stroke: rgb(0, 0, 0); fill: rgb(255, 255, 255);" cx="263.079" cy="266.774"
+                                     rx="174.234" ry="171.728"/>
+                            <path fill="#4DC979"
+                                  d="M 61.763 23.627 C 70.404 22.397 80.152 23.534 88.939 23.566 L 364.902 23.627 C 385.286 24.481 413.398 24.781 433.84 23.627 C 453.97 28.106 465.122 41.849 466.07 61.871 C 467.439 90.86 466.256 120.435 466.256 149.474 L 466.259 404.439 C 466.262 414.289 467.649 429.037 466.244 438.173 C 461.993 477.151 434.869 478.841 404.842 478.783 L 364.902 478.722 L 106.169 478.754 C 23.11 479.016 30.524 457.688 30.622 378.134 L 30.559 82.704 C 30.555 58.838 29.224 28.345 61.763 23.627 Z M 294.122 372.507 C 301.175 370.409 307.894 367.524 314.862 365.207 C 333.25 390.889 362.105 401.86 370.622 361.399 C 365.674 346.059 358.969 343.119 348.429 332.107 C 420.185 251.029 359.042 111.527 248.791 118.725 C 131.956 119.377 80.893 263.137 162.41 341.432 C 197.402 375.042 248.109 384.726 294.122 372.507 Z"
+                                  id="object-1"/>
+                            <path fill="#3AB365"
+                                  d="M 363.547 478.227 L 104.814 478.259 C 21.755 478.521 29.169 457.193 29.267 377.639 L 29.204 82.209 C 29.2 58.343 27.869 27.85 60.408 23.132 C 65.869 23.458 93.479 22.173 96.146 24.54 C 93.332 31.842 81.595 32.171 79.018 48.68 C 76.372 65.625 78.115 84.453 78.26 101.672 L 78.037 327.672 C 78.024 348.86 69 419.87 91.243 427.93 C 101.831 431.768 160.653 429.949 175.465 429.938 L 439.453 429.891 C 449.99 429.871 464.368 424.36 464.889 437.678 C 460.638 476.656 433.514 478.346 403.487 478.288 L 363.547 478.227 Z"
+                                  id="object-2"/>
+                            <path fill="#4DC979"
+                                  d="M 248.791 161.649 C 316.575 160.317 342.196 241.048 314.862 295.486 C 305.522 286.534 293.196 269.478 279.538 268.813 C 266.41 268.172 254.628 279.878 254.66 292.883 C 254.689 305.172 263.574 312.183 271.606 320.031 C 288.632 335.959 273.602 334.732 257.487 335.093 C 155.733 337.364 149.856 162.526 248.791 161.649 Z"
+                                  id="object-3"/>
+                            <path fill="#FAC551"
+                                  d="M 388.732 49.699 C 402.16 49.084 435.621 84.845 438.551 93.318 C 443.16 106.641 428.486 116.455 420.48 124.541 C 409.516 135.612 384.253 165.797 375.201 133.943 C 375.992 130.268 377.275 127.552 379.398 124.51 C 382.638 120.448 386.389 117.12 390.38 113.812 C 377.269 113.594 348.358 115.601 336.736 113.252 C 321.588 110.188 322.102 88.07 336.588 84.541 C 344.717 82.562 380.57 83.75 390.38 83.949 C 385.223 78.856 377.593 73.442 376.149 65.876 C 374.61 57.824 381.221 51.043 388.732 49.699 Z"
+                                  id="object-8" style=""/>
+                        </g>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Financial File Converter</h3>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                    Transform QIF, OFX, QFX and CSV files directly to formatted Google Sheets. Professional accounting
+                    formatting applied instantly with running balance calculations.
+                </p>
+                <div class="space-y-3 mb-6">
+                    <div class="flex items-center text-sm text-gray-700">
+                        <span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                        QIF, OFX, QFX, CSV support
+                    </div>
+                    <div class="flex items-center text-sm text-gray-700">
+                        <span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                        Automatic number formatting
+                    </div>
+                    <div class="flex items-center text-sm text-gray-700">
+                        <span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                        Running balance calculations
+                    </div>
+                </div>
+                <a href="https://chromewebstore.google.com/detail/qif-ofx-qfx-to-google-she/feboebajgahlhehdbeceakcneckbgfbn?utm=landing_card"
+                   class="w-fit mx-auto px-6 py-3 bg-purple-600 text-white font-semibold rounded-xl hover:bg-purple-700 transition-colors">
+                    Install Extension
+                </a>
+            </div>
+
+            <!-- Document Processor (Coming Soon) -->
+            <!--            <div class="feature-card bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 border border-green-100">-->
+            <!--                <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-6">-->
+            <!--                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">-->
+            <!--                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"-->
+            <!--                              d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>-->
+            <!--                    </svg>-->
+            <!--                </div>-->
+            <!--                <h3 class="text-2xl font-bold text-gray-900 mb-4">Smart Document Processor</h3>-->
+            <!--                <p class="text-gray-600 mb-6 leading-relaxed">-->
+            <!--                    AI-powered document analysis and conversion. Extract data from PDFs, images, and complex documents-->
+            <!--                    with intelligent formatting detection.-->
+            <!--                </p>-->
+            <!--                <div class="space-y-3 mb-6">-->
+            <!--                    <div class="flex items-center text-sm text-gray-700">-->
+            <!--                        <span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>-->
+            <!--                        PDF to Excel conversion-->
+            <!--                    </div>-->
+            <!--                    <div class="flex items-center text-sm text-gray-700">-->
+            <!--                        <span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>-->
+            <!--                        OCR text extraction-->
+            <!--                    </div>-->
+            <!--                    <div class="flex items-center text-sm text-gray-700">-->
+            <!--                        <span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>-->
+            <!--                        Intelligent data parsing-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                <button class="w-full px-6 py-3 bg-gray-300 text-gray-600 font-semibold rounded-xl cursor-not-allowed">-->
+            <!--                    Coming Soon-->
+            <!--                </button>-->
+            <!--            </div>-->
+
+            <!-- Data Analyzer (Coming Soon) -->
+            <!--            <div class="feature-card bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-8 border border-orange-100">-->
+            <!--                <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl flex items-center justify-center mb-6">-->
+            <!--                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">-->
+            <!--                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"-->
+            <!--                              d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>-->
+            <!--                    </svg>-->
+            <!--                </div>-->
+            <!--                <h3 class="text-2xl font-bold text-gray-900 mb-4">Business Data Analyzer</h3>-->
+            <!--                <p class="text-gray-600 mb-6 leading-relaxed">-->
+            <!--                    Advanced analytics and reporting tools for business data. Create professional dashboards and-->
+            <!--                    insights from your processed documents.-->
+            <!--                </p>-->
+            <!--                <div class="space-y-3 mb-6">-->
+            <!--                    <div class="flex items-center text-sm text-gray-700">-->
+            <!--                        <span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>-->
+            <!--                        Interactive dashboards-->
+            <!--                    </div>-->
+            <!--                    <div class="flex items-center text-sm text-gray-700">-->
+            <!--                        <span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>-->
+            <!--                        Custom reporting-->
+            <!--                    </div>-->
+            <!--                    <div class="flex items-center text-sm text-gray-700">-->
+            <!--                        <span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>-->
+            <!--                        Data visualization-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                <button class="w-full px-6 py-3 bg-gray-300 text-gray-600 font-semibold rounded-xl cursor-not-allowed">-->
+            <!--                    Coming Soon-->
+            <!--                </button>-->
+            <!--            </div>-->
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                Why Choose DocMuncher?
+            </h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Built for professionals who demand reliability, security, and efficiency in their document workflows
+            </p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="space-y-8">
+                <div class="flex items-start space-x-4">
+                    <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Enterprise-Grade Security</h3>
+                        <p class="text-gray-600">OAuth 2.0 authentication and local processing ensure your financial
+                            data never touches external servers.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-4">
+                    <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Lightning Fast Processing</h3>
+                        <p class="text-gray-600">Process thousands of transactions in seconds with intelligent parsing
+                            algorithms and optimized workflows.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-4">
+                    <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Professional Results</h3>
+                        <p class="text-gray-600">Consistent formatting, proper accounting standards, and client-ready
+                            presentations every time.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative">
+                <div class="bg-white rounded-3xl shadow-2xl p-8">
+                    <div class="space-y-6">
+                        <!-- Before/After comparison -->
+                        <div class="border border-gray-200 rounded-xl p-4">
+                            <h4 class="font-semibold text-gray-700 mb-3">Traditional Process</h4>
+                            <div class="space-y-2 text-sm text-gray-600">
+                                <div class="flex items-center">
+                                    <span class="w-2 h-2 bg-red-400 rounded-full mr-3"></span>
+                                    Download bank files manually
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="w-2 h-2 bg-red-400 rounded-full mr-3"></span>
+                                    Convert between file types
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="w-2 h-2 bg-red-400 rounded-full mr-3"></span>
+                                    Apply formatting manually
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="w-2 h-2 bg-red-400 rounded-full mr-3"></span>
+                                    Fix errors and alignment
+                                </div>
+                            </div>
+                            <div class="mt-3 text-lg font-bold text-red-600">⏱️ 2-3 hours per file</div>
+                        </div>
+
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full flex items-center justify-center mx-auto">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="border border-green-200 rounded-xl p-4 bg-green-50">
+                            <h4 class="font-semibold text-gray-700 mb-3">With DocMuncher</h4>
+                            <div class="space-y-2 text-sm text-gray-600">
+                                <div class="flex items-center">
+                                    <span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                                    Drag and drop any file
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                                    Automatic format detection
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                                    Professional formatting applied
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                                    Ready-to-use Google Sheet
+                                </div>
+                            </div>
+                            <div class="mt-3 text-lg font-bold text-green-600">⚡ 30 seconds</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-24 gradient-bg relative overflow-hidden">
+    <div class="absolute inset-0 bg-black/20"></div>
+    <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center relative z-10">
+        <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">
+            Ready to Transform Your Workflow?
+        </h2>
+        <p class="text-xl text-gray-200 mb-8 leading-relaxed">
+            Join thousands of professionals who have eliminated manual document processing from their daily workflow
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="https://chromewebstore.google.com/detail/qif-ofx-qfx-to-google-she/feboebajgahlhehdbeceakcneckbgfbn?utm=landing_footer"
+               class="px-8 py-4 bg-white text-purple-600 font-semibold rounded-xl hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-xl">
+                Get Started
+            </a>
+            <!--            <button class="px-8 py-4 border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300">-->
+            <!--                Schedule Demo-->
+            <!--            </button>-->
+        </div>
+    </div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-8">
+            <div class="md:col-span-2">
+                <div class="flex items-center space-x-3 mb-6">
+                    <div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-blue-600 rounded-xl flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">DM</span>
+                    </div>
+                    <span class="text-2xl font-bold">DocMuncher</span>
+                </div>
+                <p class="text-gray-400 mb-6 max-w-md">
+                    Professional document processing tools that eliminate manual work and deliver consistent, reliable
+                    results.
+                </p>
+                <!--                <div class="flex space-x-4">-->
+                <!--                    <a href="#"-->
+                <!--                       class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors">-->
+                <!--                        <span class="text-sm">📧</span>-->
+                <!--                    </a>-->
+                <!--                    <a href="#"-->
+                <!--                       class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors">-->
+                <!--                        <span class="text-sm">🐦</span>-->
+                <!--                    </a>-->
+                <!--                    <a href="#"-->
+                <!--                       class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors">-->
+                <!--                        <span class="text-sm">💼</span>-->
+                <!--                    </a>-->
+                <!--                </div>-->
+            </div>
+
+            <div>
+                <h4 class="font-semibold text-lg mb-4">Tools</h4>
+                <ul class="space-y-3 text-gray-400">
+                    <li>
+                        <a href="https://chromewebstore.google.com/detail/qif-ofx-qfx-to-google-she/feboebajgahlhehdbeceakcneckbgfbn?utm=landing"
+                           class="hover:text-white transition-colors">QIF, OFX, QFX to Google Sheets</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-semibold text-lg mb-4">Support</h4>
+                <ul class="space-y-3 text-gray-400">
+                    <li><a href="mailto:albertkag.es@gmail.com" class="hover:text-white transition-colors">Contact
+                        Us</a></li>
+                    <li><a href="https://docs.google.com/document/d/1huLztPLwChzY3RIkibbucLg3umCgyL2Q-K7BHp8xZc0"
+                           class="hover:text-white transition-colors">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-400 text-sm">
+                © 2025 DocMuncher. All rights reserved.
+            </p>
+            <div class="flex items-center space-x-6 mt-4 md:mt-0">
+                <a href="https://docs.google.com/document/d/1huLztPLwChzY3RIkibbucLg3umCgyL2Q-K7BHp8xZc0"
+                   class="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Add scroll effect to navigation
+    window.addEventListener('scroll', function () {
+        const nav = document.querySelector('nav');
+        if (window.scrollY > 100) {
+            nav.classList.add('bg-white/95');
+            nav.classList.remove('bg-white/90');
+        } else {
+            nav.classList.add('bg-white/90');
+            nav.classList.remove('bg-white/95');
+        }
+    });
+
+    // Mobile menu toggle
+    // document.querySelector('.md\\:hidden button').addEventListener('click', function () {
+    //     // Mobile menu implementation would go here
+    //     console.log('Mobile menu clicked');
+    // });
+
+    // Add intersection observer for animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    // Observe feature cards for staggered animation
+    document.querySelectorAll('.feature-card').forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(30px)';
+        card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+        observer.observe(card);
+    });
+</script>
+</body>
+</html>
